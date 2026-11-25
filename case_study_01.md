@@ -1,68 +1,119 @@
-# Case Study 2: Progressive Electricity Billing
-
-## 1. Problem Statement
+Case Study 2: Progressive Electricity Billing
+1. Problem Statement
 Calculate household bills using multiple consumption slabs, fixed charges, surcharges, and rebates, then compare bills across several months and identify unusual increases.
 
-## 2. Objectives
-- Implement multi-tier slab-based electricity tariff calculations.
-- Incorporate fixed charges, surcharges, and rebates based on consumption levels.
-- Compare monthly billing amounts to detect and flag unusual spikes in electricity usage.
+2. Objectives
+Implement multi-tier slab-based electricity tariff calculations.
 
-## 3. Assumptions
-- Slab 1 (0-100 units): ₹1.50/unit
-- Slab 2 (101-300 units): ₹2.50/unit
-- Slab 3 (>300 units): ₹4.00/unit
-- Fixed charge is ₹50 per month.
-- A 5% rebate is applied if consumption is under 100 units; a 10% surcharge applies if consumption exceeds 400 units.
-- An increase of more than 30% compared to the previous month is flagged as unusual.
+Incorporate fixed charges, surcharges, and rebates based on consumption levels.
 
-## 4. Algorithm
-1. Start the program.
-2. Input or define the list of monthly unit consumptions.
-3. For each month's units, calculate base energy charges using progressive slabs.
-4. Apply rebate if units <= 100, or surcharge if units > 400.
-5. Add the fixed monthly charge to compute the final bill.
-6. Store all monthly bills in a list.
-7. Iterate through the bills list from the second month onwards and compute percentage change from the previous month.
-8. Flag any month where the increase exceeds 30%.
-9. Display all monthly bills and unusual spike alerts.
-10. Stop the program.
+Compare monthly billing amounts to detect and flag unusual spikes in electricity usage.
 
-## 5. Flowchart
-```
-[Start]
-   |
-   v
-[Read Monthly Units List]
-   |
-   v
-[Loop through each month's units]
-   |---> [Units <= 100?] --Yes--> [Base = Units * 1.50; Apply 5% Rebate]
-   |          |No
-   |          v
-   |     [Units <= 300?] --Yes--> [Base = 150 + (Units - 100) * 2.50]
-   |          |No
-   |          v
-   |     [Base = 150 + 500 + (Units - 300) * 4.00]
-   |          |
-   |          v
-   |     [Units > 400?] --Yes--> [Add 10% Surcharge]
-   |
-   v
-[Add Fixed Charge (₹50) -> Store in Bills List]
-   |
-   v
-[Compare consecutive bills for >30% increase]
-   |
-   v
-[Print Bills & Alerts]
-   |
-   v
-[End]
-```
+3. Assumptions
+Slab 1 (0-100 units): ₹1.50/unit
 
-## 6. Pseudocode
-```
+Slab 2 (101-300 units): ₹2.50/unit
+
+Slab 3 (>300 units): ₹4.00/unit
+
+Fixed charge is ₹50 per month.
+
+A 5% rebate is applied if consumption is under 100 units; a 10% surcharge applies if consumption exceeds 400 units.
+
+An increase of more than 30% compared to the previous month is flagged as unusual.
+
+4. Algorithm
+Start the program.
+
+Input or define the list of monthly unit consumptions.
+
+For each month's units, calculate base energy charges using progressive slabs.
+
+Apply rebate if units <= 100, or surcharge if units > 400.
+
+Add the fixed monthly charge to compute the final bill.
+
+Store all monthly bills in a list.
+
+Iterate through the bills list from the second month onwards and compute percentage change from the previous month.
+
+Flag any month where the increase exceeds 30%.
+
+Display all monthly bills and unusual spike alerts.
+
+Stop the program.
+
+5. Flowchart (Box Model)
+Plaintext
+┌────────────────────────────────────────────────────────┐
+│                        [ START ]                       │
+└───────────────────────────┬────────────────────────────┘
+                            │
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│               [ Read Monthly Units List ]              │
+└───────────────────────────┬────────────────────────────┘
+                            │
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│            [ Loop Through Each Month's Units ]         │
+└───────────────────────────┬────────────────────────────┘
+                            │
+                            ▼
+┌────────────────────────────────────────────────────────┐
+│                [ Condition: Units <= 100? ]            │
+└─────────────┬──────────────────────────┬───────────────┘
+              │ Yes                      │ No
+              ▼                          ▼
+┌──────────────────────────┐    ┌────────────────────────┐
+│  Base = Units * 1.50     │    │  [ Condition:          │
+│  Apply 5% Rebate         │    │    Units <= 300? ]     │
+└─────────────┬────────────┘    └────────┬───────┬───────┘
+              │                          │ Yes   │ No
+              │                          ▼       ▼
+              │                 ┌────────────────┐ ┌────────────────────────┐
+              │                 │ Base = 150 +   │ │ Base = 150 + 500 +     │
+              │                 │ (Units - 100)  │ │ (Units - 300) * 4.00   │
+              │                 │ * 2.50         │ └───────────┬────────────┘
+              │                 └────────┬───────┘             │
+              │                          │                     ▼
+              │                          │          ┌────────────────────────┐
+              │                          │          │ [ Condition:           │
+              │                          │          │   Units > 400? ]       │
+              │                          │          └─────┬──────────┬───────┘
+              │                          │                │ Yes      │ No
+              │                          │                ▼          ▼
+              │                          │         ┌──────────────┐ ┌──────┐
+              │                          │         │ Add 10%      │ │ (No  │
+              │                          │         │ Surcharge    │ │ Surch│
+              │                          │         └──────┬───────┘ └──┬───┘
+              │                          │                │          │
+              │                          └────────┬───────┘          │
+              │                                   │                  │
+              └─────────────────┬─────────────────┘                  │
+                                │                                    │
+                                └─────────────────┬──────────────────┘
+                                                  │
+                                                  ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│         [ Add Fixed Charge (₹50) -> Store in Bills List ]              │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│         [ Compare Consecutive Bills for >30% Increase ]                │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                  [ Print Bills & Unusual Spike Alerts ]                │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+                                    ▼
+┌────────────────────────────────────────────────────────┐
+│                         [ END ]                        │
+└────────────────────────────────────────────────────────┘
+6. Pseudocode
 BEGIN
     SET monthly_units = [95, 180, 210, 420, 440, 290]
     SET bills = []
@@ -95,12 +146,10 @@ BEGIN
         ENDIF
     ENDFOR
 END
-```
+7. Python Source Code
+Refer to code.py in this directory.
 
-## 7. Python Source Code
-Refer to [`code.py`](./code.py) in this directory.
-
-```python
+Python
 # Case Study 2: Progressive Electricity Billing
 
 def calculate_monthly_bill(units):
@@ -140,17 +189,13 @@ for i in range(1, len(monthly_bills)):
     pct_increase = ((curr_bill - prev_bill) / prev_bill) * 100
     if pct_increase > 30.0:
         print(f"ALERT: {months[i]} bill (₹{curr_bill:.2f}) increased by {pct_increase:.2f}% compared to {months[i-1]} (₹{prev_bill:.2f}).")
-```
+8. Test Cases
+Test Case	Input Units	Expected Base + Adj	Fixed Charge	Final Bill	Alert Status
+TC1 (Rebate)	95	₹142.50 - ₹7.12 = ₹135.38	₹50.00	₹185.38	Baseline Month 1
+TC2 (Slab 2)	180	₹350.00	₹50.00	₹400.00	+115.77% (Unusual Spike)
+TC3 (Surcharge)	420	₹1130.00 + ₹113.00 = ₹1243.00	₹50.00	₹1293.00	+172.21% (Unusual Spike)
+9. Output Screenshots
+(Run python code.py in your terminal and attach the screenshot here before final GitHub submission.)
 
-## 8. Test Cases
-| Test Case | Input Units | Expected Base + Adj | Fixed Charge | Final Bill | Alert Status |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| TC1 (Rebate) | 95 | ₹142.50 - ₹7.12 = ₹135.38 | ₹50.00 | ₹185.38 | Baseline Month 1 |
-| TC2 (Slab 2) | 180 | ₹350.00 | ₹50.00 | ₹400.00 | +115.77% (Unusual Spike) |
-| TC3 (Surcharge) | 420 | ₹1130.00 + ₹113.00 = ₹1243.00 | ₹50.00 | ₹1293.00 | +172.21% (Unusual Spike) |
-
-## 9. Output Screenshots
-*(Run `python code.py` in your terminal and attach the screenshot here before final GitHub submission.)*
-
-## 10. Conclusion
+10. Conclusion
 The progressive electricity billing system accurately evaluates tiered energy consumption, applies conditional rebates and surcharges, and proactively detects anomalous month-over-month billing spikes using fundamental Python loops and conditionals.
