@@ -26,27 +26,45 @@ Process a sequence of deposits and withdrawals, maintain a simulated balance, en
 9. Stop the program.
 
 ## 5. Flowchart
-```
-[Start]
-   |
-   v
-[Init Balance = 15000 & Counters]
-   |
-   v
-[Loop through Transactions (Type, Amount)]
-   |---> [Type == 'D'?] --Yes--> [Amount > 0?] --Yes--> [Balance += Amount]
-   |          |No                     |No
-   |          v                       +--> [Reject Transaction]
-   |     [Type == 'W'?] --Yes--> [Valid Multiple, <=10k, Min Bal >=1k?] --Yes--> [Balance -= Amount]
-   |          |No                                                           |No
-   |          +--> [Reject: Invalid Type]                                   +--> [Reject Transaction]
-   v
-[Print Final Balance & Summary]
-   |
-   v
-[End]
-```
-
+╔════════════════════════════════════════════════════════╗
+║                        [ START ]                       ║
+╚═══════════════════════════╦════════════════════════════╝
+                            ║
+                            ▼
+╔════════════════════════════════════════════════════════╗
+║           [ Init Balance = 15000 & Counters ]          ║
+╚═══════════════════════════╦════════════════════════════╝
+                            ║
+                            ▼
+╔════════════════════════════════════════════════════════╗
+║         [ Loop through Transactions (Type, Amount) ]   ║
+╚═════════════╦═══════════════════════════╦══════════════╝
+              │ Deposit ('D')             │ Withdrawal ('W')
+              ▼                           ▼
+╔══════════════════════════╗    ╔════════════════════════╗
+║     [ Amount > 0? ]      ║    ║ [ Valid Multiple,      ║
+╚═════════════╦════════════╝    ║   <=10k, Min Bal >=1k? ]║
+              │ Yes             ╚════════════╦═══════════╝
+              ▼                              │ Yes
+╔══════════════════════════╗                 ▼
+║  [ Balance += Amount ]   ║    ╔════════════════════════╗
+╚═════════════╦════════════╝    ║  [ Balance -= Amount ] ║
+              │ No              ╚════════════╦═══════════╝
+              ▼                              │ No
+╔══════════════════════════╗                 ▼
+║  [ Reject Transaction ]  ║    ╔════════════════════════╗
+╚══════════════════════════╝    ║  [ Reject Transaction ]║
+                                ╚════════════════════════╝
+                            ║
+                            ▼
+╔════════════════════════════════════════════════════════╗
+║             [ Print Final Balance & Summary ]          ║
+╚═══════════════════════════╦════════════════════════════╝
+                            ║
+                            ▼
+╔════════════════════════════════════════════════════════╗
+║                         [ END ]                        ║
+╚════════════════════════════════════════════════════════╝
 ## 6. Pseudocode
 ```
 BEGIN
