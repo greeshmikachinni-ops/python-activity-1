@@ -44,7 +44,7 @@ Display all monthly bills and unusual spike alerts.
 Stop the program.
 
 5. Flowchart (Box Model)
-Plaintext
+
 ╔════════════════════════════════════════════════════════╗
 ║                        [ START ]                       ║
 ╚═══════════════════════════╦════════════════════════════╝
