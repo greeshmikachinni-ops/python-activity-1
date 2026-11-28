@@ -1,4 +1,4 @@
-# Case Study 63: Multi-Product Price Fluctuation Analysis
+# Case Study 10: Multi-Product Price Fluctuation Analysis
 
 products = ["Olive Oil (1L)", "Coffee Beans (500g)", "Almonds (1kg)"]
 price_history = [
