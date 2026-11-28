@@ -1,4 +1,4 @@
-# Case Study 49: Tuple-Based Product Catalogue Audit
+# Case Study 8: Tuple-Based Product Catalogue Audit
 
 ## 1. Problem Statement
 Store product identifiers, prices, and stock quantities in tuples; detect invalid records, calculate inventory values, and identify items requiring replenishment.
