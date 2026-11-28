@@ -1,4 +1,4 @@
-# Case Study 13: ATM Transaction Sequence Simulation
+# Case Study 3: ATM Transaction Sequence Simulation
 
 balance = 15000
 MAX_WITHDRAWAL = 10000
