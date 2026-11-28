@@ -1,4 +1,4 @@
-# Case Study 38: ATM Menu-Driven Banking Simulation
+# Case Study 6: ATM Menu-Driven Banking Simulation
 
 balance = 10000.0
 daily_limit = 15000.0
