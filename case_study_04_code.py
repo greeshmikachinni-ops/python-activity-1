@@ -1,4 +1,4 @@
-# Case Study 19: Multi-Product Shopping Budget Constraint
+# Case Study 4: Multi-Product Shopping Budget Constraint
 
 def calculate_payable(cart):
     subtotal = sum(price * qty for _, price, qty in cart)
