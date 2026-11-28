@@ -1,4 +1,4 @@
-# Case Study 19: Multi-Product Shopping Budget Constraint
+# Case Study 4: Multi-Product Shopping Budget Constraint
 
 ## 1. Problem Statement
 Evaluate a shopping basket containing multiple products and quantities, apply discount conditions, and determine which purchases must be reduced to remain within a fixed budget.
