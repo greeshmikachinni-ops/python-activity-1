@@ -1,4 +1,4 @@
-# Case Study 42: Student Marks Matrix Analysis
+# Case Study 7: Student Marks Matrix Analysis
 
 ## 1. Problem Statement
 Analyse a matrix of student marks across subjects, calculate row-wise and column-wise statistics, identify top performers, and detect subjects with low average performance.
