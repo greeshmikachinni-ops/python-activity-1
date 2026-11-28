@@ -1,4 +1,4 @@
-# Case Study 38: ATM Menu-Driven Banking Simulation
+# Case Study 6: ATM Menu-Driven Banking Simulation
 
 ## 1. Problem Statement
 Implement repeated menu operations for deposits, withdrawals, balance inquiries, and transaction summaries, with validation and specified account limits.
