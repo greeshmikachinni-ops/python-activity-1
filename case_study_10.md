@@ -1,4 +1,4 @@
-# Case Study 63: Multi-Product Price Fluctuation Analysis
+# Case Study 10: Multi-Product Price Fluctuation Analysis
 
 ## 1. Problem Statement
 Process historical product prices stored in lists, calculate percentage changes, identify maximum fluctuations, and flag products exceeding a supplied threshold.
