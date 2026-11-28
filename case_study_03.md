@@ -1,4 +1,4 @@
-# Case Study 13: ATM Transaction Sequence Simulation
+# Case Study 3: ATM Transaction Sequence Simulation
 
 ## 1. Problem Statement
 Process a sequence of deposits and withdrawals, maintain a simulated balance, enforce withdrawal limits, reject invalid transactions, and produce a transaction summary.
