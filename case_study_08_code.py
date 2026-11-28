@@ -1,4 +1,4 @@
-# Case Study 49: Tuple-Based Product Catalogue Audit
+# Case Study 8: Tuple-Based Product Catalogue Audit
 
 catalogue = [
     ("P101", "Wireless Mouse", 500.0, 25),
