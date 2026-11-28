@@ -1,4 +1,4 @@
-# Case Study 4: Employee Payroll and Deduction Analysis
+# Case Study 2: Employee Payroll and Deduction Analysis
 
 employees = [
     ("EMP01", "Aarav Sharma", 20000, 2, 1000),
