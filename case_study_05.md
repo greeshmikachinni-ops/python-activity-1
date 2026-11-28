@@ -1,4 +1,4 @@
-# Case Study 29: Password Policy Validation Engine
+# Case Study 5: Password Policy Validation Engine
 
 ## 1. Problem Statement
 Evaluate sample password strings against minimum length, character-category, repetition, and prohibited-substring rules; explain each failed condition.
