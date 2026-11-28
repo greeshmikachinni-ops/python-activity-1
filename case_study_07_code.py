@@ -1,4 +1,4 @@
-# Case Study 42: Student Marks Matrix Analysis
+# Case Study 7: Student Marks Matrix Analysis
 
 students = ["Ananya", "Bikram", "Charan", "Divya"]
 subjects = ["Math", "Physics", "Chemistry", "CS"]
