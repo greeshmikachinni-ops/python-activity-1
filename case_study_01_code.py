@@ -1,4 +1,4 @@
-# Case Study 2: Progressive Electricity Billing
+# Case Study 1: Progressive Electricity Billing
 
 def calculate_monthly_bill(units):
     fixed_charge = 50.0
