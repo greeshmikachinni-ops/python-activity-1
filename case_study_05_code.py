@@ -1,4 +1,4 @@
-# Case Study 29: Password Policy Validation Engine
+# Case Study 5: Password Policy Validation Engine
 
 def validate_password(pwd):
     errors = []
