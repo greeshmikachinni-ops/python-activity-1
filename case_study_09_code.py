@@ -1,4 +1,4 @@
-# Case Study 53: Food Waste Monitoring System
+# Case Study 9: Food Waste Monitoring System
 
 days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 prepared_meals = [400, 420, 380, 450, 500, 300, 280]
