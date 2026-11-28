@@ -1,4 +1,4 @@
-# Case Study 4: Employee Payroll and Deduction Analysis
+# Case Study 2: Employee Payroll and Deduction Analysis
 
 ## 1. Problem Statement
 Calculate gross salary from basic pay, allowances, overtime, and incentives; apply progressive deductions and generate a formatted salary statement.
