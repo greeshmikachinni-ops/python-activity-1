@@ -1,4 +1,4 @@
-# Case Study 53: Food Waste Monitoring System
+# Case Study 9: Food Waste Monitoring System
 
 ## 1. Problem Statement
 Compare prepared meals, meals served, and leftovers across several days; calculate wastage percentages and identify days exceeding acceptable limits.
