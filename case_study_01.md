@@ -1,4 +1,4 @@
-# Case Study 2: Progressive Electricity Billing
+# Case Study 1: Progressive Electricity Billing
 
 ## 1. Problem Statement
 Calculate household bills using multiple consumption slabs, fixed charges, surcharges, and rebates, then compare bills across several months and identify unusual increases.
